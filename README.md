@@ -226,11 +226,11 @@ let custom = units(5);  // 20px
 
 ## Use with Sigil (Terminal Styling)
 
-Combine with [molten_sigil](https://crates.io/crates/molten_sigil) for beautiful terminal output:
+Combine with [glyphs](https://crates.io/crates/glyphs) for beautiful terminal output:
 
 ```rust
 use molten_brand::colors::molten;
-use molten_sigil::{style, Color};
+use glyphs::{style, Color};
 
 // Convert brand colors to terminal colors
 let styled = style("🔥 Molten Labs")
@@ -250,7 +250,7 @@ Molten Brand is part of the **Molten Labs** open source ecosystem:
 | Crate | Description | Status |
 |-------|-------------|--------|
 | **[molten_brand](https://crates.io/crates/molten_brand)** | Design tokens (you are here) | ✅ Published |
-| **[molten_sigil](https://crates.io/crates/molten_sigil)** | ANSI escape sequences | ✅ Published |
+| **[glyphs](https://crates.io/crates/glyphs)** | ANSI escape sequences | ✅ Published |
 | **[lacquer](https://crates.io/crates/lacquer)** | Terminal styling (like lipgloss) | ✅ Published |
 | **cauldron** | TUI framework (like bubbletea) | 📋 Planned |
 
