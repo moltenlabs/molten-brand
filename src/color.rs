@@ -94,6 +94,7 @@ impl Rgba {
 
     /// Create an RGBA color from RGB with a given opacity (0.0 - 1.0).
     #[must_use]
+    #[allow(clippy::cast_possible_truncation, clippy::cast_sign_loss)]
     pub fn from_rgb_alpha(rgb: Rgb, alpha: f32) -> Self {
         Self {
             r: rgb.r,
@@ -119,7 +120,7 @@ impl Rgba {
         f32::from(self.a) / 255.0
     }
 
-    /// Convert to CSS rgba() format.
+    /// Convert to CSS `rgba()` format.
     #[must_use]
     pub fn css(&self) -> String {
         format!(

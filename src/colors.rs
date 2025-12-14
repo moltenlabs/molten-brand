@@ -9,7 +9,7 @@ use crate::color::Color;
 ///
 /// These colors represent the core Forge brand and are shared across all products.
 pub mod forge {
-    use super::*;
+    use super::Color;
 
     /// Primary background color - deep black.
     pub const BLACK: Color = Color::rgb(10, 10, 10); // #0A0A0A
@@ -34,7 +34,7 @@ pub mod forge {
 ///
 /// A warm orange that represents energy, creativity, and the forge's fire.
 pub mod molten {
-    use super::*;
+    use super::Color;
 
     /// Molten 50 - lightest.
     pub const SCALE_50: Color = Color::rgb(255, 247, 237); // #FFF7ED
@@ -59,7 +59,7 @@ pub mod molten {
     /// Molten 950 - darkest.
     pub const SCALE_950: Color = Color::rgb(67, 20, 7); // #431407
 
-    /// Primary brand color (alias for SCALE_500).
+    /// Primary brand color (alias for `SCALE_500`).
     pub const PRIMARY: Color = SCALE_500;
 }
 
@@ -67,7 +67,7 @@ pub mod molten {
 ///
 /// A consistent gray scale used for text, borders, and backgrounds.
 pub mod neutral {
-    use super::*;
+    use super::Color;
 
     /// Neutral 0 - pure white.
     pub const SCALE_0: Color = Color::rgb(255, 255, 255); // #FFFFFF
@@ -97,7 +97,7 @@ pub mod neutral {
 
 /// Surface colors for dark mode UI.
 pub mod surface {
-    use super::*;
+    use super::Color;
 
     /// Base app background.
     pub const BASE: Color = Color::rgb(10, 10, 10); // #0A0A0A
@@ -114,7 +114,7 @@ pub mod surface {
 
 /// Text colors.
 pub mod text {
-    use super::*;
+    use super::Color;
 
     /// Primary text color.
     pub const PRIMARY: Color = Color::rgb(250, 250, 250); // #FAFAFA
@@ -159,13 +159,12 @@ pub fn neutral_scale(scale: u16) -> Color {
         200 => neutral::SCALE_200,
         300 => neutral::SCALE_300,
         400 => neutral::SCALE_400,
-        500 => neutral::SCALE_500,
         600 => neutral::SCALE_600,
         700 => neutral::SCALE_700,
         800 => neutral::SCALE_800,
         900 => neutral::SCALE_900,
         950 => neutral::SCALE_950,
-        _ => neutral::SCALE_500, // Default to mid
+        _ => neutral::SCALE_500, // Default to mid (includes 500)
     }
 }
 
@@ -178,12 +177,11 @@ pub fn molten_scale(scale: u16) -> Color {
         200 => molten::SCALE_200,
         300 => molten::SCALE_300,
         400 => molten::SCALE_400,
-        500 => molten::SCALE_500,
         600 => molten::SCALE_600,
         700 => molten::SCALE_700,
         800 => molten::SCALE_800,
         900 => molten::SCALE_900,
         950 => molten::SCALE_950,
-        _ => molten::SCALE_500, // Default to primary
+        _ => molten::SCALE_500, // Default to primary (includes 500)
     }
 }

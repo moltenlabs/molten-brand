@@ -23,7 +23,7 @@ use crate::color::Color;
 /// let cursor = lair::terminal::CURSOR;
 /// ```
 pub mod lair {
-    use super::*;
+    use super::Color;
 
     /// Primary color - Goblin Purple (mystical, powerful).
     pub const PRIMARY: Color = Color::rgb(124, 58, 237); // #7C3AED
@@ -107,7 +107,7 @@ pub mod lair {
 /// Hearth is the content-first editorial platform for the Molten Labs community.
 /// Its visual identity uses Iron Blue for a trustworthy, editorial feel.
 pub mod hearth {
-    use super::*;
+    use super::Color;
 
     /// Primary color - Iron Blue (trustworthy, editorial).
     pub const PRIMARY: Color = Color::rgb(59, 130, 246); // #3B82F6
@@ -170,7 +170,7 @@ pub mod hearth {
 /// Alloy is the official design system for Molten Labs, providing the
 /// foundation for all products. It uses Molten Orange as its primary color.
 pub mod alloy {
-    use super::*;
+    use super::Color;
 
     /// Primary color - Molten Orange (energy, CTAs).
     pub const PRIMARY: Color = Color::rgb(249, 115, 22); // #F97316
@@ -240,8 +240,7 @@ pub fn get_product_primary(product: &str) -> Color {
     match product.to_lowercase().as_str() {
         "lair" => lair::PRIMARY,
         "hearth" => hearth::PRIMARY,
-        "alloy" => alloy::PRIMARY,
-        _ => alloy::PRIMARY, // Default to Alloy
+        _ => alloy::PRIMARY, // Default to Alloy (includes "alloy")
     }
 }
 
@@ -251,7 +250,6 @@ pub fn get_product_tagline(product: &str) -> &'static str {
     match product.to_lowercase().as_str() {
         "lair" => lair::meta::TAGLINE,
         "hearth" => hearth::meta::TAGLINE,
-        "alloy" => alloy::meta::TAGLINE,
-        _ => alloy::meta::TAGLINE,
+        _ => alloy::meta::TAGLINE, // Default to Alloy (includes "alloy")
     }
 }

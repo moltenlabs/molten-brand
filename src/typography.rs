@@ -117,7 +117,7 @@ pub struct TextStyle {
 
 /// Pre-defined text style presets.
 pub mod presets {
-    use super::*;
+    use super::{families, letter_spacing, line_heights, sizes, weights, TextStyle};
 
     /// Display heading style.
     pub const DISPLAY: TextStyle = TextStyle {

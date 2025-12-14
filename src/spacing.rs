@@ -96,7 +96,6 @@ pub const fn get(index: u16) -> u16 {
         1 => scale::S1,
         2 => scale::S2,
         3 => scale::S3,
-        4 => scale::S4,
         5 => scale::S5,
         6 => scale::S6,
         8 => scale::S8,
@@ -109,7 +108,7 @@ pub const fn get(index: u16) -> u16 {
         40 => scale::S40,
         48 => scale::S48,
         64 => scale::S64,
-        _ => scale::S4, // Default to medium
+        _ => scale::S4, // Default to medium (includes 4)
     }
 }
 
