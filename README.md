@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/moltenlabs/molten-brand/main/.github/assets/banner.png" alt="Molten Brand" width="100%" />
-</p>
 
 <h1 align="center">🔥 Molten Brand</h1>
 
