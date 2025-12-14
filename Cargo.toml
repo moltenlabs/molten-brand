@@ -1,0 +1,28 @@
+[package]
+name = "molten_brand"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+authors = ["Molten Labs <hello@moltenlabs.dev>"]
+license = "MIT OR Apache-2.0"
+description = "Design tokens and brand system for Molten Labs CLI tools 🔥"
+repository = "https://github.com/moltenlabs/molten-brand"
+homepage = "https://molten.dev"
+documentation = "https://docs.rs/molten_brand"
+readme = "README.md"
+keywords = ["design-tokens", "theme", "colors", "terminal", "cli"]
+categories = ["command-line-interface", "gui", "config"]
+include = ["src/**/*", "Cargo.toml", "LICENSE-*", "README.md", "CHANGELOG.md"]
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[dependencies]
+serde = { version = "1", features = ["derive"], optional = true }
+
+[features]
+default = []
+serde = ["dep:serde"]
+
+[dev-dependencies]
+serde_json = "1"
