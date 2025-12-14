@@ -226,11 +226,11 @@ let custom = units(5);  // 20px
 
 ## Use with Sigil (Terminal Styling)
 
-Combine with [sigil](https://github.com/moltenlabs/sigil) for beautiful terminal output:
+Combine with [molten_sigil](https://crates.io/crates/molten_sigil) for beautiful terminal output:
 
 ```rust
 use molten_brand::colors::molten;
-use sigil::{style, Color};
+use molten_sigil::{style, Color};
 
 // Convert brand colors to terminal colors
 let styled = style("🔥 Molten Labs")
@@ -249,12 +249,10 @@ Molten Brand is part of the **Molten Labs** open source ecosystem:
 
 | Crate | Description | Status |
 |-------|-------------|--------|
-| **[molten-brand](https://github.com/moltenlabs/molten-brand)** | Design tokens (you are here) | ✅ Released |
-| **[sigil](https://github.com/moltenlabs/sigil)** | ANSI escape sequences | ✅ Released |
-| **[lacquer](https://github.com/moltenlabs/lacquer)** | Terminal styling (like lipgloss) | 🚧 Coming Soon |
-| **[cauldron](https://github.com/moltenlabs/cauldron)** | TUI framework (like bubbletea) | 📋 Planned |
-| **[rune](https://github.com/moltenlabs/rune)** | Shell script tools (like gum) | 📋 Planned |
-| **[ember](https://github.com/moltenlabs/ember)** | Markdown renderer (like glow) | 📋 Planned |
+| **[molten_brand](https://crates.io/crates/molten_brand)** | Design tokens (you are here) | ✅ Published |
+| **[molten_sigil](https://crates.io/crates/molten_sigil)** | ANSI escape sequences | ✅ Published |
+| **[lacquer](https://crates.io/crates/lacquer)** | Terminal styling (like lipgloss) | ✅ Published |
+| **cauldron** | TUI framework (like bubbletea) | 📋 Planned |
 
 ---
 
